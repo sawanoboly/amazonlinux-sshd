@@ -1,5 +1,7 @@
 #!/bin/bash
 
+env > /tmp/env.txt
+
 root_pw=${ROOT_PW:-rooooot}
 
 # generate host keys if not present
