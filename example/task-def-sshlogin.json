@@ -1,0 +1,27 @@
+[
+  {
+    "image": "sawanoboly/amazonlinux-sshd:latest",
+    "logConfiguration": {
+      "logDriver": "awslogs",
+      "options": {
+        "awslogs-group": "/ecs/ssh-login",
+        "awslogs-region": "us-east-1",
+        "awslogs-stream-prefix": "ecs"
+      }
+    },
+    "portMappings": [
+      {
+        "hostPort": 22,
+        "protocol": "tcp",
+        "containerPort": 22
+      }
+    ],
+    "environment": [],
+    "mountPoints": [],
+    "volumesFrom": [],
+    "essential": true,
+    "name": "sshd",
+    "cpu": 256,
+    "memory": 512
+  }
+]
