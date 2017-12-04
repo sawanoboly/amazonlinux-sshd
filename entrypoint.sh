@@ -1,6 +1,7 @@
 #!/bin/bash
 
 env > /tmp/env.txt
+env | grep AWS_ >> /root/.ssh/environment
 
 root_pw=${ROOT_PW:-rooooot}
 
