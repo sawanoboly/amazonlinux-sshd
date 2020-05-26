@@ -1,4 +1,4 @@
-FROM amazonlinux:latest
+FROM amazonlinux:2
 LABEL ref "https://github.com/sickp/docker-alpine-sshd"
 LABEL maintainer "sawanoboriyu@higanworks.com"
 ENTRYPOINT ["/entrypoint.sh"]
@@ -10,5 +10,5 @@ RUN yum install -y openssh-server aws-cli ec2-utils jq \
   && sed -i s/PasswordAuthentication.*/PasswordAuthentication\ yes/ /etc/ssh/sshd_config \
   && sed -i s/#PermitUserEnvironment.*/PermitUserEnvironment\ yes/ /etc/ssh/sshd_config
 
-ADD entrypoint.sh /entrypoint.sh
-ADD environment /root/.ssh/environment
+COPY entrypoint.sh /entrypoint.sh
+COPY environment /root/.ssh/environment
