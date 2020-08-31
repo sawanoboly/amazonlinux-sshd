@@ -1,5 +1,7 @@
 ## docker-amazonlinux-sshd
 
+[![Docker Repository on Quay](https://quay.io/repository/sawanoboly/amazonlinux-sshd/status "Docker Repository on Quay")](https://quay.io/repository/sawanoboly/amazonlinux-sshd)
+
 serve only one connection and will be shutdown after session closed.
 
 build
